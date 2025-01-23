@@ -1,0 +1,10 @@
+{
+    "marscode.codeCompletionPro": {
+        "enableCodeCompletionPro": true
+    },
+    "marscode.enableInlineCommand": true,
+    "files.associations": {
+        "string.h": "c",
+        "stdlib.h": "c"
+    }
+}
