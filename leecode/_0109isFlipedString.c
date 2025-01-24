@@ -10,9 +10,9 @@ bool isFlipedString(char* s1, char* s2) {//判断是否为旋转字符串
     char s[len1*2+1];
     strcpy(s,s2);
     strcat(s,s2);
-    s[len1*2]='\0';
+    s[len1*2]='\0';//字符串拼接
     printf("s=%s\n",s);
-    return strstr(s,s1)!=NULL;
+    return strstr(s,s1)!=NULL;//判断s中是否包含s1
 }
 int main(int argc, char *argv[]){
     char a[]="waterbottle";

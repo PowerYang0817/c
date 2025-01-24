@@ -21,11 +21,11 @@ bool oneEditAway(char *first, char *second)
             {
                 i++;
                 j++;
-            }
+            }// 长度相等，同时移动两个指针
             else if (len1 > len2)
             {
                 i++;
-            }
+            }// 长度不相等，移动长的字符串指针
             else
             {
                 j++;
@@ -37,7 +37,7 @@ bool oneEditAway(char *first, char *second)
             j++;
         }
     }
-    return flag <= 1;
+    return flag <= 1;// 最多只能有一次编辑
 }
 int main(int argc, char *argv[])
 {
