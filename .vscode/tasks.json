@@ -9,7 +9,6 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                //"*.c",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
                 

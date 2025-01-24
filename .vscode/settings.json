@@ -5,6 +5,7 @@
     "marscode.enableInlineCommand": true,
     "files.associations": {
         "string.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "funlib.h": "c"
     }
 }
