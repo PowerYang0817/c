@@ -27,7 +27,7 @@ LPHASH creatHashTable(int p){//创建哈希表,p为哈希表的大小(取余计�
 void insertData(LPHASH hash,LPDATA data){
     int pos=(data->key)%(hash->size);//哈希地址 
     while(hash->table[pos]!=NULL){
-        if(hash->table[pos]->key==data->key){
+        if(hash->table[pos]->key==data->key){//如果哈希地址不为空,并且key相同,则更新
             break;
         }    
         pos=(pos+1)%hash->size;

@@ -1,4 +1,3 @@
-
 #include "funlib.h"
 userList * createUser(){//初始化用户
     userList *user1 = (userList *)malloc(sizeof(userList));
