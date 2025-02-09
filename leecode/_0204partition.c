@@ -34,7 +34,7 @@ struct ListNode *partition2(struct ListNode *head, int x){
     struct ListNode *q = list2;
     while(p->next!=NULL){
         if(p->next->val>=x){
-            q->next=p->next;
+            q->next=p->next;//将p的下一个节点移动到list2链表的末尾
             q=q->next;
             p->next=p->next->next;//有危险，可能为空指针
         }else{
@@ -42,7 +42,7 @@ struct ListNode *partition2(struct ListNode *head, int x){
         }
     }
     q->next=NULL;
-    p->next=list2->next;
+    p->next=list2->next;//将list2链表拼接到list1链表的末尾
     return list1->next;
 }
 struct ListNode* partition3(struct ListNode* head, int x) {//简单理解，双指针存储，LEETCODE官方题解
