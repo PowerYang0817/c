@@ -6,6 +6,10 @@
     "files.associations": {
         "string.h": "c",
         "stdlib.h": "c",
-        "funlib.h": "c"
+        "funlib.h": "c",
+        "assert.h": "c",
+        "cstdlib": "c",
+        "algorithm": "c",
+        "format": "c"
     }
 }
