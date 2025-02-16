@@ -2,15 +2,25 @@
 #include<stdlib.h>
 #include<assert.h>
 typedef struct TreeNode{
-    int data;
-    struct TreeNode *left;
+    char data;
+    struct TreeNode *left;                                                                                                                                          
     struct TreeNode *right;
 }treeNode_t;//二叉树
 treeNode_t * createTree(){//动态创建二叉树
     int data;
+#if 0
+
     printf("请输入节点值:");
-    scanf("%d",&data);
-    if(data==-1){
+    scanf("%c",&data);
+#endif 
+#if 1
+    while((data=getchar())!=EOF){
+        if(data!=32&&data!='\n'){
+            break;
+        }
+    }
+#endif
+    if(data=='#'){
         return NULL;//如果赋值-1，表示节点为NULL
     }
     treeNode_t *newNode=(treeNode_t*)malloc(sizeof(treeNode_t));
@@ -26,7 +36,7 @@ void preOrderTraversal(treeNode_t *node){//前序遍历二叉树
     if(node==NULL){
         return;
     }
-    printf("%d",node->data);//打印根节点
+    printf("%c",node->data);//打印根节点
     preOrderTraversal(node->left);
     preOrderTraversal(node->right);
 }
@@ -39,7 +49,7 @@ void printTree(treeNode_t* root, int level) {//立体打印
         printf("    ");
     }
     // 打印当前节点的值
-    printf("%d\n", root->data);
+    printf("%c\n", root->data);
     // 递归打印左子树，层级加 1
     printTree(root->left, level + 1);
 }

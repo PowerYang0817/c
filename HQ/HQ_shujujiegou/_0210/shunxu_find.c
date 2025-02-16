@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-int findByValue(int *p,int length,int value){
+int findByValue(int *p,int length,int value){//顺序查找
     for(int i=0;i<length;i++){
         if(p[i]==value){
             return i;

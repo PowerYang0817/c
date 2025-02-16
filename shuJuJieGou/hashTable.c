@@ -24,7 +24,7 @@ LPHASH creatHashTable(int p){//创建哈希表,p为哈希表的大小(取余计�
     }//初始化哈希表
     return hash;
 }
-void insertData(LPHASH hash,LPDATA data){
+void insertData(LPHASH hash,LPDATA data){//使用的是开放寻址法处理冲突-线性探测
     int pos=(data->key)%(hash->size);//哈希地址 
     while(hash->table[pos]!=NULL){
         if(hash->table[pos]->key==data->key){//如果哈希地址不为空,并且key相同,则更新
